@@ -10,7 +10,7 @@ const app = express()
 // Declare routes that people can visit on the application
 
 // White Page
-app.get('/:color', function (req, res) {
+app.get('/', function (req: express.Request, res):void {
     let myColor: unknown = req.params.color
     if (typeof(myColor) === 'string'){
         res.send(`
